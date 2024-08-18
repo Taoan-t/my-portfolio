@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import sapProjImg1 from "../assets/img/calculator-app.PNG";
+import sapProjImg2 from "../assets/img/task-manager-app.PNG";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -48,6 +49,12 @@ export const Projects = () => {
       description: "A calculator with light mode and dark mode",
       imgUrl: sapProjImg1,
       projUrl: "https://calculator-qian.netlify.app/",
+    },
+    {
+      title: "Task Manager App",
+      description: "A task manager app with custom theme",
+      imgUrl: sapProjImg2,
+      projUrl: "https://taskmanager-qian.netlify.app",
     },
   ];
 
