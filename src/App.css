@@ -15,6 +15,37 @@
   font-weight: 400;
 }
 
+/************ Variables Css ************/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(353, 98%, 67%);
+  --first-color-alt: hsl(353, 50%, 47%);
+  --gradient-color: linear-gradient(
+    90deg,
+    var(--first-color),
+    var(--first-color-alt)
+  );
+  --black-color: hsl(353, 90%, 16%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat Alternates", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --normal-font-size: 0.938rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
 /************ Default Css ************/
 * {
   margin: 0;
@@ -63,6 +94,7 @@ a:hover {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -247,7 +279,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 0;
   padding: 260px 0 100px 0;
   /* background-image: url("./assets/img/banner-bg.png"); */
-  background-image: url("./assets/img/17740155_159Z_2107.w026.n002.628B.p1.628.jpg");
+
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
