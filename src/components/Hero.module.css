@@ -29,30 +29,6 @@
   z-index: var(--z-tooltip);
 }
 
-.hero__title {
-  font-size: var(--biggest-font-size);
-  margin-bottom: 1rem;
-}
-
-.hero__description {
-  font-weight: var(--font-medium);
-  margin-bottom: 2rem;
-}
-
-.hero__button {
-  display: inline-flex;
-  background: var(--gradient-color);
-  color: var(--black-color);
-  font-weight: var(--font-semi-bold);
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  transition: box-shadow 0.4s;
-}
-
-.hero__button:hover {
-  box-shadow: 0 16px 48px hsla(353, 90%, 56%, 0.4);
-}
-
 .hero__img-3 {
   position: absolute;
   width: 50px;
@@ -71,6 +47,66 @@
   right: -9.2rem;
   bottom: 0;
   filter: saturate(1.3);
+}
+
+.hero .tagline {
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: var(--gradient-color);
+  color: var(--black-color);
+  border: 1px solid var(--gradient-color);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.hero h1 {
+  font-size: var(--medium-font-size);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.hero .introduction {
+  font-weight: var(--font-medium);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+.hero button {
+  color: #134e4a;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.hero button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.hero button:hover svg {
+  margin-left: 25px;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
 }
 
 /* Sakura petals */

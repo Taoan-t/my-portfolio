@@ -1,5 +1,5 @@
 /************ Custom Font ************/
-@font-face {
+/* @font-face {
   font-family: Centra;
   src: url("./assets/font/CentraNo2-Bold.ttf");
   font-weight: 700;
@@ -13,7 +13,9 @@
   font-family: Centra;
   src: url("./assets/font/CentraNo2-Book.ttf");
   font-weight: 400;
-}
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap");
 
 /************ Variables Css ************/
 :root {
@@ -33,7 +35,8 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat Alternates", sans-serif;
-  --biggest-font-size: 2.5rem;
+  --biggest-font-size: 4.5rem;
+  --medium-font-size: 2.5rem;
   --normal-font-size: 0.938rem;
 
   /*========== Font weight ==========*/
@@ -63,8 +66,9 @@ body {
   overflow-x: hidden;
   position: relative;
   background-color: #121212 !important;
-  color: #fff !important;
-  font-family: "Centra", sans-serif !important;
+  font-size: var(--normal-font-size) !important;
+  color: var(--black-color) !important;
+  font-family: var(--body-font) !important;
 }
 
 h1,
