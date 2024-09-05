@@ -1,63 +1,121 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Header.module.css";
-import { RiLeafLine, RiApps2Line, RiCloseLargeLine } from "@remixicon/react";
+import {
+  RiLeafLine,
+  RiApps2Line,
+  RiCloseLargeLine,
+  RiLinkedinBoxFill,
+  RiGithubFill,
+} from "@remixicon/react";
 
 const Header = () => {
+  /*=============== ADD BLUR HEADER ===============*/
+  const headerRef = useRef();
+
+  const blurHeader = () => {
+    const header = headerRef.current;
+    console.log(header);
+    if (header) {
+      if (window.scrollY >= 50) {
+        header.classList.add(`${styles["blur-header"]}`);
+      } else {
+        header.classList.remove(`${styles["blur-header"]}`);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", blurHeader);
+
+    return () => {
+      window.removeEventListener("scroll", blurHeader);
+    };
+  }, []);
+
+  /*=============== SHOW MENU ===============*/
   const [show, setShow] = useState(false);
 
   function showMenu() {
-    setShow(!show);
+    setShow(true);
+  }
+
+  function closeMenu() {
+    setShow(false);
   }
 
   return (
-    <header class={styles.header} id="header">
-      <nav class={`${styles.nav} ${styles.container}`}>
-        <a href="#" class={styles["nav__logo"]}>
+    <header className={styles.header} id="header" ref={headerRef}>
+      <nav className={`${styles.nav} ${styles.container}`}>
+        <a href="#" className={styles["nav__logo"]}>
           <RiLeafLine />
-          <span>Temple</span>
+          <span>Qian Tang</span>
         </a>
-        <div class={styles["nav__menu"]} id="nav-menu">
-          <ul class={styles["nav__list"]}>
+
+        <div
+          className={
+            show
+              ? `${styles["nav__menu"]} ${styles["show-menu"]}`
+              : styles["nav__menu"]
+          }
+          id="nav-menu"
+        >
+          <ul className={styles["nav__list"]}>
             <li>
-              <a href="#" class={styles["nav__link"]}>
+              <a
+                href="#home"
+                className={styles["nav__link"]}
+                onClick={closeMenu}
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#" class={styles["nav__link"]}>
-                Location
+              <a
+                href="#skills"
+                className={styles["nav__link"]}
+                onClick={closeMenu}
+              >
+                Skills
               </a>
             </li>
             <li>
-              <a href="#" class={styles["nav__link"]}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" class={styles["nav__link"]}>
-                Explore
-              </a>
-            </li>
-            <li>
-              <a href="#" class={styles["nav__link"]}>
-                Contact
+              <a
+                href="#projects"
+                className={styles["nav__link"]}
+                onClick={closeMenu}
+              >
+                Projects
               </a>
             </li>
           </ul>
 
           {/* Close button */}
-          <div class={styles["nav__close"]} id="nav-close">
+          <div
+            className={styles["nav__close"]}
+            id="nav-close"
+            onClick={closeMenu}
+          >
             <RiCloseLargeLine />
           </div>
         </div>
 
+        <span className="navbar-text">
+          <div className="social-icon">
+            <a href="#">
+              <RiLinkedinBoxFill className="icon" />
+            </a>
+            <a href="#">
+              <RiGithubFill className="icon" />
+            </a>
+          </div>
+          <button className="vvd" onClick={() => console.log("connect")}>
+            <span>Let's connect</span>
+          </button>
+        </span>
+
         {/* Toggle button  */}
         <div
-          class={
-            show
-              ? `${styles["nav__toggle"]} ${styles["show-menu"]}`
-              : styles["nav__toggle"]
-          }
+          className={styles["nav__toggle"]}
           id="nav-toggle"
           onClick={showMenu}
         >

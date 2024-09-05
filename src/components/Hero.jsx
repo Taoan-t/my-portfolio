@@ -102,11 +102,11 @@ const Hero = () => {
   };
 
   return (
-    <section class={styles.hero}>
-      <img src={bg} alt="image" class={styles["hero__bg"]} />
+    <section className={styles.hero}>
+      <img src={bg} alt="image" className={styles["hero__bg"]} />
 
-      <div class={`${styles["hero__container"]} ${styles.container}`}>
-        <div ref={dataRef} class={styles["hero__data"]}>
+      <div className={`${styles["hero__container"]} ${styles.container}`}>
+        <div ref={dataRef} className={styles["hero__data"]}>
           <TrackVisibility>
             {({ isVisible }) => (
               <div
@@ -119,7 +119,7 @@ const Hero = () => {
                   <p>Hi I'm Qian Tang</p>
                   <span className={styles.wrap}> {text}</span>
                 </h1>
-                <p class={styles.introduction}>Breif Introduction</p>
+                <p className={styles.introduction}>Breif Introduction</p>
                 <button onClick={() => console.log("connect")}>
                   Let's connect <ArrowRightCircle size={25} />
                 </button>
@@ -131,23 +131,23 @@ const Hero = () => {
             ref={sunRef}
             src={img3}
             alt="sun"
-            class={styles["hero__img-3"]}
+            className={styles["hero__img-3"]}
           />
         </div>
 
-        <div class={styles["hero__images"]}>
+        <div className={styles["hero__images"]}>
           <img
             ref={cherryRef}
             src={img1}
             alt="cherry"
-            class={styles["hero__img-1"]}
+            className={styles["hero__img-1"]}
           />
 
           <img
             ref={boatRef}
             src={img2}
             alt="boat"
-            class={styles["hero__img-2"]}
+            className={styles["hero__img-2"]}
           />
         </div>
       </div>
