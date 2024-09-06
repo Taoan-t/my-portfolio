@@ -65,7 +65,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-color: #f3f4f6 !important;
   font-size: var(--normal-font-size) !important;
   color: var(--black-color) !important;
   font-family: var(--body-font) !important;
