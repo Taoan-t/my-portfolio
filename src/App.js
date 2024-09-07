@@ -14,12 +14,11 @@ function App() {
       <Header />
       <Hero />
       <Skills />
+      <Projects />
       {/* 
       <NavBar />
       <Banner />
-      
-      <Projects />
-      <Footer /> */}
+     <Footer /> */}
     </div>
   );
 }

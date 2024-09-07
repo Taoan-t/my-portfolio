@@ -102,7 +102,7 @@ const Hero = () => {
   };
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <img src={bg} alt="image" className={styles["hero__bg"]} />
 
       <div className={`${styles["hero__container"]} ${styles.container}`}>

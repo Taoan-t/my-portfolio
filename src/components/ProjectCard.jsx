@@ -1,17 +1,20 @@
 import { Col } from "react-bootstrap";
-export const ProjectCard = ({ title, description, imgUrl, projUrl }) => {
+import { RiGithubFill, RiApps2Line } from "@remixicon/react";
+import styles from "./ProjectCard.module.css";
+
+const ProjectCard = ({ title, description, imgUrl, projUrl }) => {
   const handleClick = () => {
     window.open(projUrl, "_blank");
   };
   return (
     <Col sm={6} md={4}>
       <div
-        className="proj-imgbx"
+        className={styles["proj-imgbx"]}
         onClick={handleClick}
         style={{ cursor: "pointer" }}
       >
         <img src={imgUrl} alt={title} />
-        <div className="proj-txtx">
+        <div className={styles["proj-txtx"]}>
           <h4>{title}</h4>
           <span>{description}</span>
         </div>
@@ -19,3 +22,5 @@ export const ProjectCard = ({ title, description, imgUrl, projUrl }) => {
     </Col>
   );
 };
+
+export default ProjectCard;
