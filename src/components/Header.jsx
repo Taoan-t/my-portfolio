@@ -99,13 +99,22 @@ const Header = () => {
           </div>
         </div>
 
-        <span className="navbar-text">
-          <div className="social-icon">
-            <a href="#">
-              <RiLinkedinBoxFill className="icon" />
+        {/* Contact Span */}
+        <span className={styles["navbar-text"]}>
+          <div className={styles["social-icon"]}>
+            <a
+              href="https://www.linkedin.com/in/qian-tang-8b373023b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiLinkedinBoxFill className={styles.icon} />
             </a>
-            <a href="#">
-              <RiGithubFill className="icon" />
+            <a
+              href="https://github.com/Taoan-t"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiGithubFill className={styles.icon} />
             </a>
           </div>
           <button className="vvd" onClick={() => console.log("connect")}>

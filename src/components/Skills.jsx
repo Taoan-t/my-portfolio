@@ -46,7 +46,7 @@ export const Skills = () => {
 
   const skills = [
     { name: "JavaScript", icon: icon3, bgColor: "#000" },
-    { name: "C#", icon: icon7, bgColor: "#000" },
+    { name: "C #", icon: icon7, bgColor: "#000" },
     { name: "Java", icon: icon11, bgColor: "#000" },
     { name: "Python", icon: icon17, bgColor: "#000" },
     { name: "HTML5", icon: icon1, bgColor: "#000" },
@@ -65,7 +65,7 @@ export const Skills = () => {
 
   return (
     <section className={styles.skill} id="skills">
-      <div className={styles.header}>
+      <div className="header">
         <h1>My Skills</h1>
       </div>
 

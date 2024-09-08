@@ -5,6 +5,7 @@
   left: 0;
   background: transparent;
   z-index: var(--z-fixed);
+  font-size: 18px;
 }
 
 .header a {
@@ -12,11 +13,13 @@
   color: var(--black-color);
   font-weight: var(--font-semi-bold);
   opacity: 0.75;
+  transition: transform 0.3s ease;
 }
 
 .header a:hover,
 .header a:active {
   opacity: 1;
+  transform: scale(1.2);
 }
 
 .container {
@@ -37,6 +40,7 @@
   align-items: center;
   column-gap: 0.25rem;
   color: var(--black-color);
+  font-weight: var(--font-bold);
 }
 
 .nav__logo i {
@@ -62,14 +66,13 @@ span.navbar-text {
 .social-icon a {
   width: 42px;
   height: 42px;
-  background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
   margin-right: 6px;
   align-items: center;
   justify-content: center;
   line-height: 1;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--black-color);
 }
 .social-icon a::before {
   content: "";
@@ -85,7 +88,7 @@ span.navbar-text {
   transform: scale(1);
 }
 .social-icon a .icon {
-  width: 40%;
+  width: 100%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
@@ -94,11 +97,10 @@ span.navbar-text {
     hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 .navbar-text button {
-  font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 18px 34px;
-  font-size: 18px;
+  color: var(--black-color);
+  border: 1px solid var(--black-color);
+  padding: 12px 34px;
+  font-weight: var(--font-medium);
   margin-left: 18px;
   position: relative;
   background-color: transparent;
@@ -112,7 +114,7 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background: var(--gradient-color);
   left: 0;
   top: 0;
   z-index: -1;
@@ -134,7 +136,9 @@ span.navbar-text {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
+.nav__link {
+  display: inline-block;
+}
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px) {
   .nav__menu {

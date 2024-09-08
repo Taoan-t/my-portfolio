@@ -1,29 +1,12 @@
 .skill {
   padding-top: 20px;
-}
-
-.header {
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 4px;
-  width: 100px;
-  background-color: var(--first-color);
-  border-radius: 2px;
+  background-color: var(--emerald-50);
 }
 
 .skill-container {
   display: grid;
   max-width: 80%;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -64,7 +47,7 @@
   bottom: 0;
   width: 0px;
   height: 4px;
-  background-color: var(--first-color);
+  background-color: hsl(348.38, 100%, 68.63%);
   transition: width 0.3s ease-in;
 }
 
@@ -76,7 +59,7 @@
   bottom: 0;
   width: 0px;
   height: 4px;
-  background-color: var(--first-color);
+  background-color: hsl(348.38, 100%, 68.63%);
   transition: width 0.3s ease-in;
 }
 

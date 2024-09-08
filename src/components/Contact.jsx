@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import styles from "./Contact.module.css";
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -44,14 +45,16 @@ export const Contact = () => {
   };
 
   return (
-    <section className="contact" id="connect">
+    <section className={styles.contact} id="connect">
+      <div className="header">
+        <h1>Get In Touch</h1>
+      </div>
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
             <img src={contactImg} alt="Contact-us" />
           </Col>
           <Col md={6}>
-            <h2>Get In Touch</h2>
             <form onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">

@@ -18,13 +18,13 @@ gsap.registerPlugin(CSSPlugin);
 
 const Hero = () => {
   /* Image animation */
-  const cherryRef = useRef();
+  const bgRef = useRef();
   const boatRef = useRef();
   const sunRef = useRef();
   const dataRef = useRef();
 
   useGSAP(() => {
-    gsap.from(cherryRef.current, {
+    gsap.from(bgRef.current, {
       opacity: 0,
       x: 400,
       duration: 5,
@@ -103,7 +103,7 @@ const Hero = () => {
 
   return (
     <section className={styles.hero} id="home">
-      <img src={bg} alt="image" className={styles["hero__bg"]} />
+      <img ref={bgRef} src={bg} alt="image" className={styles["hero__bg"]} />
 
       <div className={`${styles["hero__container"]} ${styles.container}`}>
         <div ref={dataRef} className={styles["hero__data"]}>
@@ -136,12 +136,12 @@ const Hero = () => {
         </div>
 
         <div className={styles["hero__images"]}>
-          <img
+          {/* <img
             ref={cherryRef}
             src={img1}
             alt="cherry"
             className={styles["hero__img-1"]}
-          />
+          /> */}
 
           <img
             ref={boatRef}

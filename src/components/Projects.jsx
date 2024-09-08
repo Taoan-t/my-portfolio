@@ -5,10 +5,9 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import sapProjImg1 from "../assets/img/calculator-app.PNG";
 import sapProjImg2 from "../assets/img/task-manager-app.PNG";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import background from "../assets/img/background.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import styles from "./Project.module.css";
 
 export const Projects = () => {
   const webappProjects = [
@@ -68,8 +67,9 @@ export const Projects = () => {
   ];
 
   return (
-    <section className={styles.project} id="projects">
+    <section className="project" id="projects">
       <Container>
+        {/* <img className="background" src={background} alt="background"></img> */}
         <Row>
           <Col size={12}>
             <TrackVisibility>
@@ -79,7 +79,9 @@ export const Projects = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>My Projects</h2>
+                  <div className="header">
+                    <h1>My Projects</h1>
+                  </div>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
@@ -90,32 +92,17 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
-                      className={`${styles["nav-pills"]} mb-5 justify-content-center align-items-center`}
+                      className="nav-pills mb-5 justify-content-center align-items-center"
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link
-                          eventKey="first"
-                          className={styles["nav-link"]}
-                        >
-                          Web App
-                        </Nav.Link>
+                        <Nav.Link eventKey="first">Web App</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link
-                          eventKey="second"
-                          className={styles["nav-link"]}
-                        >
-                          Single Page App
-                        </Nav.Link>
+                        <Nav.Link eventKey="second">Single Page App</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link
-                          eventKey="third"
-                          className={styles["nav-link"]}
-                        >
-                          Responsive Design
-                        </Nav.Link>
+                        <Nav.Link eventKey="third">Responsive Design</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -153,7 +140,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
     </section>
   );
 };
