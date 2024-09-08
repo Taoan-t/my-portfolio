@@ -35,7 +35,18 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "overrides": [
+    {
+      "files": ["**/*.js"],
+      "env": {
+        "CI": false
+      },
+      "rules": {
+        "no-unused-vars": "warn" 
+      }
+    }
+  ]
   },
   "browserslist": {
     "production": [
